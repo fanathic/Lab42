@@ -2,6 +2,8 @@ class main {
 	public static void main(String[] args) {
 		Product product = new Product("Edam", 3.3, 120);
 		System.out.println("Product value is " + product.countValue());
+		product.changePrice(2.3);
+		System.out.println("Product value is " + product.countValue());
 		product.printProduct();
 	}
 }
@@ -17,6 +19,11 @@ class Product {
 	}
 	public double countValue() {
 				return(amount * price);
+	}
+
+	public void changePrice(double newPrice)
+	{
+		this.price = newPrice;
 	}
 	
 	public void printProduct() {
